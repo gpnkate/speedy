@@ -83,11 +83,6 @@ http:
 # any alphanumeric name. A host may belong to multiple groups.
 groups:
     myOwampHosts :
-        - "albq-owamp.es.net"
-        - "bois-owamp.es.net"
-        - "bost-owamp.es.net"
-        - "chic-owamp.es.net"
-        - "nettest.lbl.gov"
         - "perfsonar.unl.edu"
         - "kc-core-psr.mo.more.net"
         - "ps-bryant-lt.perfsonar.kanren.net"
@@ -97,11 +92,6 @@ groups:
 
         
     myBwctlHosts :
-        - "albq-pt1.es.net"
-        - "bois-pt1.es.net"
-        - "bost-pt1.es.net"
-        - "chic-pt1.es.net"
-        - "nettest.lbl.gov"
         - "perfsonar.unl.edu"
         - "kc-core-psr.mo.more.net"
         - "ps-bryant-lt.perfsonar.kanren.net"
