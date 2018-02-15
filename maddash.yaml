@@ -83,6 +83,10 @@ http:
 # any alphanumeric name. A host may belong to multiple groups.
 groups:
     myOwampHosts :
+        - "albq-owamp.es.net"
+        - "bois-owamp.es.net"
+        - "bost-owamp.es.net"
+        - "chic-owamp.es.net"
         - "nettest.lbl.gov"
         - "perfsonar.unl.edu"
         - "kc-core-psr.mo.more.net"
@@ -93,6 +97,10 @@ groups:
 
         
     myBwctlHosts :
+        - "albq-pt1.es.net"
+        - "bois-pt1.es.net"
+        - "bost-pt1.es.net"
+        - "chic-pt1.es.net"
         - "nettest.lbl.gov"
         - "perfsonar.unl.edu"
         - "kc-core-psr.mo.more.net"
@@ -108,42 +116,7 @@ groups:
         - "ps-bryant-lt.perfsonar.kanren.net"
         - "ps-bryant-bw.perfsonar.kanren.net"
         - "speedy.greatplains.net"
-        - "fps02-tuls.areon.net"
-
- quiltOwampHosts :
-        - "perfsonar-hartford.cen.ct.gov"
-        - "perfsonar-storrs.cen.ct.gov"
-        - "perfsonar-1850.frgp.net"
-        - "speedy.greatplains.net"
-        - "ps-bryant-lt.perfsonar.kanren.net"
-        - "perf.nbrd.net.pennren.net"
-        - "perfsonar-lsu-frey-02.loni.org"
-        - "kc-core-psr.mo.more.net"
-        - "perf-master.nysernet.org"
-        - "etn-ps.onenet.net"
-        - "perfsonar.oshean.org"
-        - "web100.pnw-gigapop.net"
-        - "56m-ps.sox.net"
-        - "uofu-chpc-latency.chpc.utah.edu"
-        - "uofu-ddc-dmz-latency.chpc.utah.edu"
-        - "perfsonar.unl.edu"
-
-    quiltBwctlHosts :
-        - "perfsonar-storrs.cen.ct.gov"
-        - "perfsonar-1850.frgp.net"
-        - "speedy.greatplains.net"
-        - "ps-bryant-bw.perfsonar.kanren.net"
-        - "perf.nbrd.net.pennren.net"
-        - "perfsonar-lsu-frey-02.loni.org"
-        - "kc-core-psr.mo.more.net"
-        - "perf-master.nysernet.org"
-        - "etn-ps.onenet.net"
-        - "perfsonar.oshean.org"
-        - "web100.pnw-gigapop.net"
-        - "56m-ps.sox.net"
-        - "uofu-chpc-bandwidth.chpc.utah.edu"
-        - "uofu-ddc-dmz-bandwidth.chpc.utah.edu"
-        - "perfsonar.unl.edu"
+        - fps02-tuls.areon.net"
 ##
 # 'groupMembers' allow you to assign special properties to items in 'groups': 
 #     - Set the "id" to the value used in the "group" list. This is required.
@@ -287,11 +260,6 @@ checks:
         retryAttempts: 3
         timeout: 60
 
-    gpnPing :
-        name: "GPN Ping"
-        description: "Test Grid for new GPN Maddash"
-
-
 #'grids' are where you define the two dimensional tables that get displayed. You specify 
 # which host 'groups' will compose the rows and columns and the 'checks' you want run. You also
 # provide some descriptive information that will be displayed
@@ -391,23 +359,6 @@ grids:
                   shortName: EVENT
                   description: "Down for maintenance"
                      
-    - name: "GPN Ping"
-      rows: "GPNhosts"
-      columns: "GPNhosts"
-      checks: 
-        - "gpnPing"
-      rowOrder: "alphabetical"
-      colOrder: "alphabetical"
-      excludeSelf: 1
-      columnAlgorithm: "all"
-      report: "throughput_mesh_report"
-      statusLabels:
-            ok: "Throughput >= 100Mbps"
-            warning: "Throughput >= 10Mbps"
-            critical: "Throughput < 10Mbps"
-            unknown: "Unable to retrieve data"
-            notrun: "Check has not yet run"
-
                     
 
 #'dashboards' provide a way to group grids together. Grids grouped in this manner will
@@ -416,17 +367,13 @@ grids:
 dashboards:
     #The following defines a dashboard that shows the BWCTL and OWAMP results on the same 
     # page. The 'name' parameter defines the title that will displayed on the dashboard
-#    - name: "My Sites"
+    - name: "My Sites"
       # Defines the list of grids that belong to this dashboard. Each 'name' must 
       # correspond to the name defined under the 'grids' sections of this config file. 
-      #grids:
-      #  - name: "OWAMP"
-      #  - name: "BWCTL"
-      #  - name: "GPN Ping"
-    - name: "GPN"
       grids:
         - name: "OWAMP"
         - name: "BWCTL"
+
 #'reports' provide a way to define patterns that can be used to alert on certain types of problems
 # Since every dashboard is different, reports provide a flexible way to define patterns
 defaultReport: "grid_up_down_report"
