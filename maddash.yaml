@@ -357,7 +357,7 @@ grids:
 dashboards:
     #The following defines a dashboard that shows the BWCTL and OWAMP results on the same 
     # page. The 'name' parameter defines the title that will displayed on the dashboard
-    - name: "My Sites"
+    - name: "GPN"
       # Defines the list of grids that belong to this dashboard. Each 'name' must 
       # correspond to the name defined under the 'grids' sections of this config file. 
       grids:
