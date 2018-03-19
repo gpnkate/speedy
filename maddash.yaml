@@ -89,6 +89,10 @@ groups:
         - "ps-bryant-bw.perfsonar.kanren.net"
         - "speedy.greatplains.net"
         - "ps02-tuls.areon.net"
+        - "ps10g.rnet.missouri.edu"
+        - "perfsonar2.sdstate.edu"
+        - "perfsonar1.usd.edu"
+        - "perfsonar2.usd.edu"
 
         
     myBwctlHosts :
@@ -98,6 +102,12 @@ groups:
         - "ps-bryant-bw.perfsonar.kanren.net"
         - "speedy.greatplains.net"
         - "ps02-tuls.areon.net"
+        - "ps02-tuls.areon.net"
+        - "ps10g.rnet.missouri.edu"
+        - "perfsonar2.sdstate.edu"
+        - "perfsonar1.usd.edu"
+        - "perfsonar2.usd.edu"
+
 
 
     GPNhosts :
