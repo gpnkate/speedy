@@ -84,7 +84,7 @@ http:
 groups:
     myOwampHosts :
         - "perfsonar.unl.edu"
-#        - "kc-core-psr.mo.more.net"
+        - "kc-core-psr.mo.more.net"
         - "speedy.greatplains.net"
         - "ps02-tuls.areon.net"
         - "ps10g.rnet.missouri.edu"
@@ -95,13 +95,13 @@ groups:
         - "ps-ksu-lt.perfsonar.kanren.net"
         - "ps-wsu-lt.perfsonar.kanren.net"
         - "tul-ps.onenet.net"
-#        - "perfsonar2.sdstate.edu"
+#        - "perfsonar.bhsu.edu"
         
 
         
     myBwctlHosts :
         - "perfsonar.unl.edu"
-#        - "kc-core-psr.mo.more.net"
+        - "kc-core-psr.mo.more.net"
         - "speedy.greatplains.net"
         - "ps02-tuls.areon.net"
         - "ps02-tuls.areon.net"
@@ -113,7 +113,7 @@ groups:
         - "ps-ksu-bw.perfsonar.kanren.net"
         - "ps-wsu-bw.perfsonar.kanren.net"
         - "tul-ps.onenet.net"
-# 	- "perfsonar2.sdstate.edu"
+# 	- "perfsonar.bhsu.edu"
 
 
 #    GPNhosts :
@@ -135,7 +135,39 @@ groupMembers:
       label: "Chicago Tester" 
     - id: "nettest.lbl.gov"
       label: "LBL Toolkit"
-      pstoolkiturl: "http://nettest.lbl.gov/toolkit" 
+    - id: "perfsonar.unl.edu"
+      label: "UNL - Lincoln, NE"
+    - id: "speedy.greatplains.net"
+      label: "GPN - Kansas City, MO"
+    - id: "ps02-tuls.areon.net"
+      label: "AREON box in Tulsa, OK"
+    - id: "ps10g.rnet.missouri.edu"
+      label: "Mizzou - Columbia, MO"
+    - id: "perfsonar2.sdstate.edu"
+      label: "SDSU - Brookings, SD"
+    - id: "perfsonar1.usd.edu"
+      label: "USD 1 - Vermillion, SD"
+    - id: "perfsonar2.usd.edu"
+      label: "USD 2 - Vermillion, SD"
+    - id: "ps-ku-bw.perfsonar.kanren.net"
+      label: "KU - Lawrence, KS"
+    - id: "ps-ksu-bw.perfsonar.kanren.net"
+      label: "KSU - Manhattan, KS"
+    - id: "ps-wsu-bw.perfsonar.kanren.net"
+      label: "WSU - Wichita, KS"
+    - id: "tul-ps.onenet.net"
+      label: "OneNet box in Tulsa, OK"
+    - id: "ps-ku-lt.perfsonar.kanren.net"
+      label: "KU - Lawrence, KS"
+    - id: "ps-ksu-lt.perfsonar.kanren.net"
+      label: "KSU - Manhattan, KS"
+    - id: "ps-wsu-lt.perfsonar.kanren.net"
+      label: "WSU - Wichita, KS"
+    - id: "kc-core-psr.mo.more.net"
+      label: "MOREnet - Kansas City, MO"
+    - id: "perfsonar.bhsu.edu"
+      label: "Black Hills State - Spearfish, SD"
+      pstoolkiturl: "http://ps-dashboard.greatplains.net/toolkit/" 
       # The special map property can be used to create template variables that change depending on opposing row or column
       # For example we could use %row.map.ip in a command to tell nettest.lbl.gov to use ip 10.0.1.1 when every the column is 
       # albq-pt1.es.net and 131.243.24.11 for anything else (default is a special key). The parameter name is freeform and "ip"
@@ -340,7 +372,7 @@ grids:
             #note: 'warning' not defined because no warning threshold set
     #Below is a second grid that defines the throughput checks to the BWCTL hosts defined.
     # The parameters have the same meaning as the OWAMP check above so they are not repeated here.
-    - name: "BWCTL"
+    - name: "Throughput"
       rows: "myBwctlHosts"
       columns: "myBwctlHosts"
       checks: 
@@ -376,7 +408,7 @@ dashboards:
       # correspond to the name defined under the 'grids' sections of this config file. 
       grids:
         - name: "OWAMP"
-        - name: "BWCTL"
+        - name: "Throughput"
 
 #'reports' provide a way to define patterns that can be used to alert on certain types of problems
 # Since every dashboard is different, reports provide a flexible way to define patterns
